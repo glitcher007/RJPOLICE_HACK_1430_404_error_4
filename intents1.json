@@ -1,0 +1,76 @@
+{
+    "intents":[
+        {
+            "tag": "ipc_124",
+            "patterns": [
+                "Tell me about IPC 124",
+                "Explain section 124 of IPC",
+                "What is the punishment for assaulting the President or Governor?"
+            ],
+            "responses": [
+                "Whoever, with the intention of inducing or compelling the President of India, or Governor of any State, to exercise or refrain from exercising in any manner any of the lawful powers of such President or Governor, assaults or wrongfully restrains, or attempts wrongfully to restrain, or overawes, by means of criminal force or the show of criminal force, or attempts so to overawe, such President or Governor, shall be punished with imprisonment of either description for a term which may extend to seven years, and shall also be liable to fine.",
+                "If someone assaults or wrongfully restrains the President of India or Governor of a State with the intention of influencing their lawful powers, they can be punished with imprisonment of up to seven years and may also be fined."
+            ]
+        },
+        {
+            "tag": "ipc_125",
+            "patterns": [
+                "Tell me about IPC 125",
+                "Explain section 125 of IPC",
+                "What is the punishment for waging war against an Asian Government allied with India?"
+            ],
+            "responses": [
+                "Whoever wages war against the Government of any Asiatic Power in alliance or at peace with the Government of India or attempts to wage such war, or abets the waging of such war, shall be punished with imprisonment for life, to which fine may be added, or with imprisonment of either description for a term which may extend to seven years, to which fine may be added, or with fine.",
+                "If someone wages war against or attempts to wage war against a Government of an Asian country allied or at peace with India, or aids in doing so, they can be punished with life imprisonment, or imprisonment of up to seven years, and may also be fined."
+            ]
+        },
+        {
+            "tag": "ipc_126",
+            "patterns": [
+                "Tell me about IPC 126",
+                "Explain section 126 of IPC",
+                "What is the punishment for committing depredation on allied territories?"
+            ],
+            "responses": [
+                "Whoever commits depredation, or makes preparations to commit depredation, on the territories of any Power in alliance or at peace with the Government of India, shall be punished with imprisonment of either description for a term which may extend to seven years, and shall also be liable to fine and to forfeiture of any property used or intended to be used in committing such depredation, or acquired by such depredation.",
+                "If someone commits or prepares to commit any harmful act on the territories of a country allied or at peace with India, they can be punished with imprisonment of up to seven years, fined, and any property used or gained in the act can be forfeited."
+            ]
+        },
+        {
+            "tag": "ipc_127",
+            "patterns": [
+                "Tell me about IPC 127",
+                "Explain section 127 of IPC",
+                "What is the punishment for receiving property taken during certain offenses?"
+            ],
+            "responses": [
+                "Whoever receives any property knowing the same to have been taken in the commission of any of the offences mentioned in sections 125 and 126, shall be punished with imprisonment of either description for a term which may extend to seven years, and shall also be liable to fine and to forfeiture of the property so received.",
+                "If someone receives property knowing it was taken during the commission of certain offenses (mentioned in sections 125 and 126), they can be punished with imprisonment of up to seven years, fined, and the property can be forfeited."
+            ]
+        },
+        {
+            "tag": "ipc_128",
+            "patterns": [
+                "Tell me about IPC 128",
+                "Explain section 128 of IPC",
+                "What is the punishment for a public servant allowing a prisoner to escape?"
+            ],
+            "responses": [
+                "Whoever, being a public servant and having the custody of any State prisoner or prisoner of war, voluntarily allows such prisoner to escape from any place in which such prisoner is confined, shall be punished with imprisonment for life, or imprisonment of either description for a term which may extend to ten years, and shall also be liable to fine.",
+                "If a public servant, responsible for the custody of a State prisoner or prisoner of war, intentionally allows the prisoner to escape from confinement, they can be punished with life imprisonment or imprisonment of up to ten years, and may also be fined."
+            ]
+        },
+        {
+            "tag": "ipc_129",
+            "patterns": [
+                "Tell me about IPC 129",
+                "Explain section 129 of IPC",
+                "What is the punishment for negligently allowing a prisoner to escape?"
+            ],
+            "responses": [
+                "Whoever, being a public servant and having the custody of any State prisoner or prisoner of war, negligently suffers such prisoner to escape from any place of confinement in which such prisoner is confined, shall be punished with simple imprisonment for a term which may extend to three years, and shall also be liable to fine.",
+                "If a public servant, responsible for the custody of a State prisoner or prisoner of war, carelessly allows the prisoner to escape from confinement, they can be punished with up to three years in jail and may also be fined."
+            ]
+        }
+    ]
+}
