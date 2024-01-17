@@ -9,7 +9,7 @@ from torch.utils.data import Dataset, DataLoader
 from pre_process import bag_of_words, tokenize, stem
 from models import NeuralNet
 
-with open('intents.json', 'r') as f:
+with open(r'C:\Users\glitcher\Desktop\Rj_hackathon_2\venv\intents1.json', 'r') as f:
     intents = json.load(f)
 
 all_words = []

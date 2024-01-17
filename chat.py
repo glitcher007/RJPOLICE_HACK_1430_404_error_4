@@ -1,33 +1,42 @@
 import random
 import json
-
 import torch
 from pre_process import bag_of_words, tokenize, stem
 from models import NeuralNet
+import train_test
+import torch, torchvision.models
+model = torchvision.models.vgg16()
+path = 'test.pth'
+torch.save(model.state_dict(), path) # nothing else here
+model.load_state_dict(torch.load(path))
 
-from models import NeuralNet
+print("Kundan")
 
-with open(r'C:\Users\glitcher\Desktop\Rj_police_hackathon\venv\intents1.json') as json_data:
+device = torch.device('cpu')
+
+with open(r'C:/Users/glitcher/Desktop/Rj_hackathon_2/venv/intents1.json') as json_data:
     intents = json.load(json_data)
 
-FILE = "data.pth"
-data = torch.load(FILE)
+# Use train_test.data as the model state dictionary
+model_state = train_test.data
 
-input_size = data["input_size"]
-hidden_size = data["hidden_size"]
-output_size = data["output_size"]
-all_words = data['all_words']
-tags = data['tags']
-model_state = data["model_state"]
+input_size = model_state["input_size"]
+hidden_size = model_state["hidden_size"]
+output_size = model_state["output_size"]
+all_words = model_state['all_words']
+tags = model_state['tags']
 
+# Create the NeuralNet model with the correct architecture
 model = NeuralNet(input_size, hidden_size, output_size).to(device)
+
+# Load the model state dictionary into the model
 model.load_state_dict(model_state)
 model.eval()
 
-bot_name ="Sam"
+bot_name = "Police"
 print("Let's chat! (type 'quit' to exit)")
+
 while True:
-    # sentence = "do you use credit cards?"
     sentence = input("You: ")
     if sentence == "quit":
         break
@@ -44,6 +53,7 @@ while True:
 
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
+
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
