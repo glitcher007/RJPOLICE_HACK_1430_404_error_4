@@ -12,6 +12,8 @@ from pre_process import remove_stopwords,remove_specific_characters
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
+from summarize import t5_summarizer
+from gtts import gTTS
 
 #nltk.download('stopwords')
 #ltk.download('punkt')
@@ -37,7 +39,7 @@ def detect_text(path):
 
 
 def main():
-    mypath = r"C:/Users/glitcher/Desktop/Rj_police_hackathon/venv/imgs"
+    mypath = r"C:/Users/glitcher/Desktop/Rj_hackathon_2/venv/imgs"
     only_files = [f for f in listdir(mypath) if isfile(join(mypath, f))]
     for image_path in only_files:
         # print(os.path.join(mypath, image_path))
@@ -54,11 +56,11 @@ def main():
         
         
         
-        print(token_text)
+        #print(token_text)
         
        # print(token_text)
         
-        #print(english_text)
+        return  text_to_speech(text)
         
        
 
@@ -66,6 +68,21 @@ def translate_hindi_to_english(text):
     translator = Translator()
     translation = translator.translate(text, src='hi', dest='en')
     return translation.text
+
+
+
+
+def text_to_speech(text, language='en', output_file='output.mp3'):
+    # Create a gTTS object
+    tts = gTTS(text=text, lang=language, slow=False)
+
+    # Save the speech to an MP3 file
+    tts.save(output_file)
+
+    # Play the generated MP3 file (optional)
+    os.system("start " + output_file)  # This command may vary based on your operating system
+
+
 
 
 if __name__ == "__main__":
